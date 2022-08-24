@@ -1,0 +1,17 @@
+
+gsquid:S1118":Add a private constructor to hide the implicit public one.(ÅîÎœHÜRMAJORZ
+CODE_SMELL
+Ksquid:S1166,"%Either log or rethrow this exception.(”ı¾HİRMAJORZBUG
+l
+squid:S106!";Replace this usage of System.out or System.err by a logger.(¹Ä³ëøÿÿÿÿHŞRMAJORZ
+CODE_SMELL
+@squid:S2095"Close this "Connection".(¥‰¾½HßRBLOCKERZBUG
+Xsquid:S1148%"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿHàRMINORZVULNERABILITY
+Xsquid:S1148-"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿHáRMINORZVULNERABILITY
+g
+squid:S106";Replace this usage of System.out or System.err by a logger.(¯Ëñ—HâRMAJORZ
+CODE_SMELL
+l
+squid:S106$";Replace this usage of System.out or System.err by a logger.(¯Ë¶éÿÿÿÿÿHãRMAJORZ
+CODE_SMELL
+Ksquid:S1166#"%Either log or rethrow this exception.(”ı¾HäRMAJORZBUG

@@ -1,0 +1,12 @@
+
+Dsquid:S2095"Close this "Statement".(í…³şÿÿÿÿHÒRBLOCKERZBUG
+@squid:S2095"Close this "Connection".(Ä²øÌHÓRBLOCKERZBUG
+l
+squid:S106";Replace this usage of System.out or System.err by a logger.(– º£ıÿÿÿÿHÔRMAJORZ
+CODE_SMELL
+gsquid:S1118":Add a private constructor to hide the implicit public one.(Ã¡«ÃHÕRMAJORZ
+CODE_SMELL
+Ksquid:S1166"%Either log or rethrow this exception.(”ı¾HÖRMAJORZBUG
+Ksquid:S1166 "%Either log or rethrow this exception.(”ı¾H×RMAJORZBUG
+Xsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿHØRMINORZVULNERABILITY
+Xsquid:S1148!"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿHÙRMINORZVULNERABILITY

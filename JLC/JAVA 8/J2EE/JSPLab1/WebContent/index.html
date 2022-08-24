@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration form</title>
+</head>
+<body>
+	<form action="#" method="post">
+		<table>
+			<tr>
+				<td>Enter Name :</td>
+				<td><input type="text" name="name" id="nid" required="required" onkeyup="validateName(this)" /></td>
+				<td><span id='name-error'></span></td>
+			</tr>
+			<tr>
+				<td>Enter Phone :</td>
+				<td><input type="text" name="phone" id="pid"
+					required="required" onkeyup="validatePhone(this)" /></td>
+				<td><span id='phone-error'></span></td>
+			</tr>
+			<tr>
+				<td>Enter Email :</td>
+				<td><input type="email" name="email" id="eid"
+					required="required"/></td>
+			</tr>
+			<tr>
+				<td>Enter City :</td>
+				<td><select>
+						<option>Select One</option>
+						<option value="Delhi">Delhi</option>
+						<option value="Mumbai">Mumbai</option>
+						<option value="kolkata">kolkata</option>
+						<option value="Chennai">Chennai</option>
+						<option value="Bangalore">Bangalore</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="middle"><input type="submit"
+					value="SUBMIT" id="sid" required="required" /></td>
+			</tr>
+		</table>
+	</form>
+	
+	<script type="text/javascript">
+function validatePhone(inp){
+	var sp=document.getElementById("phone-error");
+	sp.innerHTML="";
+	var str=inp.value;
+	var a=str.charCodeAt(str.length-1);
+	if(!(a>=48 && a<=57)){
+	var nval=str.substr(0,str.length-1);
+	inp.value=nval;
+	str=nval;
+	}
+	if(str.length>10){
+	var val=str.substr(0,str.length-1);
+	inp.value=val;
+	sp.innerHTML="<font color='red'>Only 10 digit allowed";
+	}
+}
+
+function validateName(inp){
+	var sp=document.getElementById("name-error");
+	sp.innerHTML="";
+	var str=inp.value;
+	var a=str.charCodeAt(str.length-1);
+	//alert(a);
+	if( !((a>=65 && a<=90) || (a>=97 && a<=122) ||(a==32)) ){
+	/* var nval=str.substr(0,str.length-1);
+	inp.value=nval;
+	str=nval; */
+	document.getElementById("nid").style.borderWidth = "thick";
+	document.getElementById("nid").style.borderColor = "red";
+	}else{
+		document.getElementById("nid").style.borderWidth = "thin";
+		document.getElementById("nid").style.borderColor = "inherit";
+	}
+}
+ 
+</script>
+</body>
+</html>

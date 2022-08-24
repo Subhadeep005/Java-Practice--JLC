@@ -1,0 +1,61 @@
+package com.jlcindia.servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+@WebServlet(name="regServlet",urlPatterns={"/register.jlc"})
+
+public class RegisterServlet extends HttpServlet{
+
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse res) 
+			throws ServletException, IOException {
+		System.out.println("service()");
+		//1. collect the data
+		String fn=req.getParameter("fname");
+		String em=req.getParameter("email");
+		String ph=req.getParameter("phone");
+		String ge=req.getParameter("gender");
+		String ti=req.getParameter("timings");
+		String co=req.getParameter("course");
+		String cous[]=req.getParameterValues("course");
+		String re=req.getParameter("remarks");
+		
+		//2. Process the data(Store in db)
+		String msg="Your Enquiry has been added successfully";
+		System.out.println("Full Name :"+fn);
+		System.out.println("Email :"+em);
+		System.out.println("Phone :"+ph);
+		System.out.println("Gender :"+ge);
+		System.out.println("Timing :"+ti);
+		System.out.println("Course :"+co);
+		System.out.println("All Courses");
+		if(cous!=null)
+			for(String c:cous){
+				System.out.println(c);
+			}
+		System.out.println("Remarks :"+re);
+		
+		//3. Send Response
+		res.setContentType("text/html");
+		PrintWriter out=res.getWriter();
+		out.println("<h1>Java Learning Center</h1>");
+		out.println("<h1>"+msg+"</h1>");
+		out.println("<h1>Full Name :</h1><h2>"+fn+"</h2>");
+		out.println("<h1>Email  :</h1><h2>"+em+"</h2>");
+		out.println("<h1>Phone :</h1><h2>"+ph+"</h2>");
+		out.println("<h1>Gender :</h1><h2>"+ge+"</h2>");
+		out.println("<h1>Timing :</h1><h2>"+ti+"</h2>");
+		out.println("<h1>Course :</h1><h2>"+co+"</h2>");
+		out.println("<h1>All Courses :</h1>");
+		if(cous!=null)
+			for(String c:cous){
+				out.println("</br><h2>"+c+"</h2>");
+			}
+		out.println("<h1>Remarks :</h1><h2>"+re+"</h2>");
+	}
+}

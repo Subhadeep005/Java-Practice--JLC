@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app >
+  <display-name>Lab6</display-name>
+  
+  <context-param>
+  <param-name>website</param-name>
+  <param-value>www.jlcindia.com</param-value>
+  </context-param>
+  
+</web-app>

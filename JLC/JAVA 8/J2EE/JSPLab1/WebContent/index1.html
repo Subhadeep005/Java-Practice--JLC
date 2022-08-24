@@ -1,0 +1,25 @@
+<html>
+<body>
+<script>
+function validatePhone(inp){
+var sp=document.getElementById("phone-error");
+sp.innerHTML="";
+var str=inp.value;
+var a=str.charCodeAt(str.length-1);
+if(!(a>=48 && a<=57)){
+var nval=str.substr(0,str.length-1);
+inp.value=nval;
+str=nval;
+}
+if(str.length>10){
+var val=str.substr(0,str.length-1);
+inp.value=val;
+//alert(val);
+sp.innerHTML="<font color='red'>Only 10 digit allowed";
+}
+}
+</script>
+<input type='text' name='phone' id='phone' onkeyUp="validatePhone(this)" />
+<span id='phone-error'></span>
+</body>
+</html>

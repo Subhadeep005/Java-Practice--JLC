@@ -1,0 +1,11 @@
+
+g
+squid:S106";Replace this usage of System.out or System.err by a logger.(¯Ëñ—HìRMAJORZ
+CODE_SMELL
+l
+squid:S106";Replace this usage of System.out or System.err by a logger.(¹Ä³ëøÿÿÿÿHíRMAJORZ
+CODE_SMELL
+gsquid:S1118":Add a private constructor to hide the implicit public one.(Ë®×¢HîRMAJORZ
+CODE_SMELL
+Ksquid:S1166"%Either log or rethrow this exception.(”ı¾HïRMAJORZBUG
+Xsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿHğRMINORZVULNERABILITY
